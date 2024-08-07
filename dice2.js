@@ -1,3 +1,21 @@
+//Test documentation
+
+//Test the dice correctly reflects 
+function testDiceSelection() {
+  
+  let dice = document.getElementById('dice');
+        dice.value = '6';
+        if (dice.value != '6') {
+          throw Error("Did not equal 6");
+        }
+            console.log("Dice Selection Test Passed");
+}
+
+
+
+
+// Write the functional code
+
 document.getElementById('roll').addEventListener('click', function() {
    
     // Get the selected dice value
@@ -41,3 +59,6 @@ document.getElementById('roll').addEventListener('click', function() {
     function mouseOut() {
       document.getElementById("clearButton").style.color = "black";
     }
+
+    testDiceSelection()
+  
