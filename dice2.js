@@ -1,12 +1,12 @@
 //Test documentation
 
-//Test the dice correctly reflects 
+//Test the dice correctly reflects value between 1 and value of the dice
 function testDiceSelection() {
   
   let dice = document.getElementById('dice');
-        dice.value = '6';
-        if (dice.value != '6') {
-          throw Error("Did not equal 6");
+
+        if ('dice' != '6') {
+          throw Error("Did roll is out of scope");
         }
             console.log("Dice Selection Test Passed");
 }
@@ -37,7 +37,9 @@ document.getElementById('roll').addEventListener('click', function() {
 
     });
 
-    //Mouse over event for roll button
+
+    // Below is extended for my personal interest and practice. I wanted to try mouse over events.
+
     document.getElementById("roll").addEventListener("mouseover", mouseOver);
     document.getElementById("roll").addEventListener("mouseout", mouseOut);
     
@@ -48,7 +50,7 @@ document.getElementById('roll').addEventListener('click', function() {
     function mouseOut() {
       document.getElementById("roll").style.color = "black";
     }
-//Mouse over event for clear button
+
     document.getElementById("clearButton").addEventListener("mouseover", mouseOver);
     document.getElementById("clearButton").addEventListener("mouseout", mouseOut);
     
