@@ -1,19 +1,18 @@
-# Dice-Project
+# Dice-Project - Lab Exercise 8
 This is my Lab Exercise 8 for module 1 of my Software Engineering course with the Institute of Data.
-
-# Lab Exercise 8:
 You have been hired by devsInc to create a landing page for their new project. They want to support people playing tabletop games from home and require a Dice Generator.
 
-Features:
+## Features:
 The user should be able to choose different dice, such as a D6 or a D10 (number of faces). The user should be able to roll their chosen dice to see the random outcome.
 
-• Define on paper, all the user stories (functionalities) you will need for this page.
-• Make a simple storyboard of the user using the system.
-• Create a git repository for the project
-• Clone the project locally
-• Work on the project creating 2 branches, one for the UI, and one for rolling the dice, committing and merging when completed.
-• Create the roll dice function by passing an argument, in order to reutilise the same function multiple times • Write unit tests for the roll dice function.
-• When complete, push the content to your git repository.
+1. Define on paper, all the user stories (functionalities) you will need for this page.
+2. Make a simple storyboard of the user using the system.
+3. Create a git repository for the project
+4. Clone the project locally
+5. Work on the project creating 2 branches, one for the UI, and one for rolling the dice, committing and merging when completed.
+6. Create the roll dice function by passing an argument, in order to reutilise the same function multiple times 
+7. Write unit tests for the roll dice function.
+8. When complete, push the content to your git repository.
 
 # User Story
 1. I want to select the type of dice from a series of options
