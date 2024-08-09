@@ -1,8 +1,9 @@
 body {
     font-family: Arial;
-    background-color: #e3b6db;
+    background-color: 		#354260;
     text-align: center;
     margin: 20px;
+    color:aliceblue
 }
 
 button {
@@ -10,11 +11,12 @@ button {
     padding: 10px;
     font-size: 16px;
     text-align: center;
-    background-color: #ffe0eb;
-    border-color: #da6aa4;
+    background-color: 	#32c9b4;
+    border-color: 	#232c40;
 }
 
 #result {
     font-weight: bold;
     font-size: 24px;
 }
+

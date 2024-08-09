@@ -1,54 +1,62 @@
-//Test documentation
-
 //Test the dice correctly reflects value between 1 and value of the dice
-function testDiceSelection() {
-  if (
-    document.getElementById("result") < document.getElementById("dice".valueOf)
-  ) {
-    throw Error("Did roll is out of scope");
+function testDiceSelection(result) {
+  console.log(result);
+  if (result > document.getElementById("dice").value) {
+    throw Error("Dice roll is out of scope");
   }
-  console.log("Dice Selection Test Passed");
+  console.log("+value text passed");
+
+  if (result <= 0) {
+    throw new Error("Does not support less than 1");
+  }
+  console.log("-value test passed");
 }
 
+function testClearButton() {
+  let clear = document.getElementById("result").innerText;
+  if (clear > 0) {
+    throw Error("Button did not reset")
+  }
+  console.log("Results reset correctly")
+}
 // Write the functional code
 
 document.getElementById("roll").addEventListener("click", function () {
-  // Get the selected dice value
   let dice = document.getElementById("dice").value;
 
-  // Generate a random number based on the dice value
   let result = Math.floor(Math.random() * dice) + 1;
 
-  // Display the result
-  document.getElementById("result").textContent = result;
+  testDiceSelection(result);
+
+  document.getElementById("result").innerText = result;
 });
 
 document.getElementById("clearButton").addEventListener("click", function () {
-  document.getElementById("result").textContent = 0;
+  document.getElementById("result").innerText = 0;
+
+  testClearButton();
 });
 
 // Below is extended for my personal interest and practice. I wanted to try mouse over events.
 
-document.getElementById("roll").addEventListener("mouseover", mouseOver);
-document.getElementById("roll").addEventListener("mouseout", mouseOut);
+document.getElementById("roll").addEventListener("mouseover", function(){
+  document.getElementById("roll").style.color = "white";
+  document.getElementById("roll").style.backgroundColor = "black";
+});
 
-function mouseOver() {
-  document.getElementById("roll").style.color = "red";
-}
-
-function mouseOut() {
+document.getElementById("roll").addEventListener("mouseout", function(){
+  document.getElementById("roll").style.backgroundColor = "#32c9b4";
   document.getElementById("roll").style.color = "black";
-}
+});
 
-document.getElementById("clearButton").addEventListener("mouseover", mouseOver);
-document.getElementById("clearButton").addEventListener("mouseout", mouseOut);
 
-function mouseOver() {
-  document.getElementById("clearButton").style.color = "red";
-}
 
-function mouseOut() {
+document.getElementById("clearButton").addEventListener("mouseover", function(){
+  document.getElementById("clearButton").style.color = "white";
+  document.getElementById("clearButton").style.backgroundColor = "black";
+});
+
+document.getElementById("clearButton").addEventListener("mouseout", function(){
+  document.getElementById("clearButton").style.backgroundColor = "#32c9b4";
   document.getElementById("clearButton").style.color = "black";
-}
-
-testDiceSelection();
+});
