@@ -5,6 +5,30 @@ body {
     margin: 20px;
     color:aliceblue
 }
+#log-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    width: 80%;
+    max-width: 350px;
+    min-height: 600px;
+    max-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 5px;
+    padding-left: 5px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    color: black;
+    background-color: #baf4ec;
+    border: 	#121a47 solid 2px;
+    border-radius: 15px;
+ 
+}
+ol li:nth-child(odd) {
+    background: 	#80d69e;
+  }
+
 
 button {
     margin-top: 10px;
@@ -18,5 +42,13 @@ button {
 #result {
     font-weight: bold;
     font-size: 24px;
+    
 }
+
+p{
+  
+    min-height: 20px;
+    margin-left: auto;
+    margin-right: auto;
+ }
 

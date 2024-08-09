@@ -15,11 +15,18 @@ function testDiceSelection(result) {
 function testClearButton() {
   let clear = document.getElementById("result").innerText;
   if (clear > 0) {
-    throw Error("Button did not reset")
+    throw Error("Button did not reset");
   }
-  console.log("Results reset correctly")
+  console.log("Results reset correctly");
 }
 // Write the functional code
+
+function logResult(result) {
+  const logList = document.getElementById("log-list");
+  const newLogItem = document.createElement("li");
+  newLogItem.textContent = `${result}`;
+  logList.insertBefore(newLogItem, logList.firstChild);
+}
 
 document.getElementById("roll").addEventListener("click", function () {
   let dice = document.getElementById("dice").value;
@@ -29,34 +36,39 @@ document.getElementById("roll").addEventListener("click", function () {
   testDiceSelection(result);
 
   document.getElementById("result").innerText = result;
+
+  logResult(result);
 });
 
 document.getElementById("clearButton").addEventListener("click", function () {
   document.getElementById("result").innerText = 0;
+  document.getElementById("log-list").innerHTML = "";
 
   testClearButton();
 });
 
 // Below is extended for my personal interest and practice. I wanted to try mouse over events.
 
-document.getElementById("roll").addEventListener("mouseover", function(){
+document.getElementById("roll").addEventListener("mouseover", function () {
   document.getElementById("roll").style.color = "white";
   document.getElementById("roll").style.backgroundColor = "black";
 });
 
-document.getElementById("roll").addEventListener("mouseout", function(){
+document.getElementById("roll").addEventListener("mouseout", function () {
   document.getElementById("roll").style.backgroundColor = "#32c9b4";
   document.getElementById("roll").style.color = "black";
 });
 
+document
+  .getElementById("clearButton")
+  .addEventListener("mouseover", function () {
+    document.getElementById("clearButton").style.color = "white";
+    document.getElementById("clearButton").style.backgroundColor = "black";
+  });
 
-
-document.getElementById("clearButton").addEventListener("mouseover", function(){
-  document.getElementById("clearButton").style.color = "white";
-  document.getElementById("clearButton").style.backgroundColor = "black";
-});
-
-document.getElementById("clearButton").addEventListener("mouseout", function(){
-  document.getElementById("clearButton").style.backgroundColor = "#32c9b4";
-  document.getElementById("clearButton").style.color = "black";
-});
+document
+  .getElementById("clearButton")
+  .addEventListener("mouseout", function () {
+    document.getElementById("clearButton").style.backgroundColor = "#32c9b4";
+    document.getElementById("clearButton").style.color = "black";
+  });
