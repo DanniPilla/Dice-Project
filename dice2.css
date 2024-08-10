@@ -1,22 +1,68 @@
 body {
-    font-family: Arial;
-    background-color: 		#354260;
+    font-family: sans-serif;
+    background-image: url("https://w0.peakpx.com/wallpaper/378/537/HD-wallpaper-fantasy-landscape-mountains-waterfall-river-fantasy.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
     text-align: center;
     margin: 20px;
-    color:aliceblue
+    color:	#1c2841;
+  
 }
+
+h1{
+    font-size: 100px;
+    font-family: 'Trick Or Treats', sans-serif;
+    text-shadow: 8px 8px 7px #a67c00;
+    color: 	#ffcf40;
+
+}
+
+label {
+    font-size:30px;
+}
+#log-list {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    max-width: 250px;
+    min-width: 100px;
+    min-height: 300px;
+    max-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 5px;
+    padding-left: 5px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    color: black;
+    background-image: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3B4MTAyNTkxNS1pbWFnZS1rd3Z3ZzZwcC5qcGc.jpg');
+}
+
 
 button {
     margin-top: 10px;
     padding: 10px;
     font-size: 16px;
-    text-align: center;
-    background-color: 	#32c9b4;
-    border-color: 	#232c40;
+color: "white";
+    background-color:#1c2841;
+    border-color: #a67c00;
 }
 
 #result {
     font-weight: bold;
     font-size: 24px;
+    
 }
+
+p{
+  
+    min-height: 20px;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+
 
