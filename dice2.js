@@ -55,8 +55,8 @@ document.getElementById("roll").addEventListener("mouseover", function () {
 });
 
 document.getElementById("roll").addEventListener("mouseout", function () {
-  document.getElementById("roll").style.backgroundColor = "#32c9b4";
-  document.getElementById("roll").style.color = "black";
+  document.getElementById("roll").style.backgroundColor = "#1c2841";
+  document.getElementById("roll").style.color = "white";
 });
 
 document
@@ -64,11 +64,12 @@ document
   .addEventListener("mouseover", function () {
     document.getElementById("clearButton").style.color = "white";
     document.getElementById("clearButton").style.backgroundColor = "black";
+
   });
 
 document
   .getElementById("clearButton")
   .addEventListener("mouseout", function () {
-    document.getElementById("clearButton").style.backgroundColor = "#32c9b4";
-    document.getElementById("clearButton").style.color = "black";
+    document.getElementById("clearButton").style.backgroundColor = "#1c2841";
+    document.getElementById("clearButton").style.color = "white";
   });
